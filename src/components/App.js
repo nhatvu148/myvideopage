@@ -12,7 +12,7 @@ const App = () => {
     onTermSubmit("buildings");
   }, []);
 
-  const KEY = "AIzaSyBB1VjA1Qz31EN2S0cj9e-nH-ob_Lg-dcA";
+  const KEY = "AIzaSyBXAyimeyDQaq0xckMpjEG4NzYGJR_XTbg";
 
   const onTermSubmit = async term => {
     const response = await axios.get(
