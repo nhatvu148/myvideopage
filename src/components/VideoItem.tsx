@@ -1,7 +1,7 @@
-import './VideoItem.css';
-import React from 'react';
+import "./VideoItem.css";
+import * as React from "react";
 
-const VideoItem = ({ video, onVideoSelect }) => {
+const VideoItem: React.FC = ({ video, onVideoSelect }) => {
   return (
     <div onClick={() => onVideoSelect(video)} className="video-item item">
       <img

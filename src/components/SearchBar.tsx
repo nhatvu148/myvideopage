@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import * as React from "react";
 
-const SearchBar = props => {
-  const [term, setTerm] = useState("");
+const SearchBar: React.FC = props => {
+  const [term, setTerm] = React.useState("");
 
   const onInputChange = event => {
     setTerm(event.target.value);

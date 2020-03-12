@@ -1,7 +1,7 @@
-import React from 'react';
-import VideoItem from './VideoItem';
+import * as React from "react";
+import VideoItem from "./VideoItem";
 
-const VideoList = ({ videos, onVideoSelect }) => {
+const VideoList: React.FC = ({ videos, onVideoSelect }) => {
   const renderedList = videos.map(video => {
     return (
       <VideoItem

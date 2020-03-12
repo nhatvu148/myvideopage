@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
 import SearchBar from "./SearchBar";
 import axios from "axios";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-const App = () => {
-  const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
+const App: React.FC = () => {
+  const [videos, setVideos] = React.useState([]);
+  const [selectedVideo, setSelectedVideo] = React.useState(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     onTermSubmit("buildings");
   }, []);
 
   const KEY = "AIzaSyBXAyimeyDQaq0xckMpjEG4NzYGJR_XTbg";
 
-  const onTermSubmit = async term => {
+  const onTermSubmit = async (term: string) => {
     const response = await axios.get(
       "https://www.googleapis.com/youtube/v3/search",
       {

@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from "react";
 
-const VideoDetail = ({ video }) => {
+const VideoDetail: React.FC = ({ video }) => {
   if (!video) {
     return <div>Loading...</div>;
   }
