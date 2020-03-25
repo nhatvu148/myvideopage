@@ -1,7 +1,11 @@
 import "./VideoItem.css";
-import * as React from "react";
+import React from "react";
 
-const VideoItem: React.FC = ({ video, onVideoSelect }) => {
+interface Props {
+  videos: string;
+}
+
+const VideoItem: React.FC<Props> = ({ video, onVideoSelect }) => {
   return (
     <div onClick={() => onVideoSelect(video)} className="video-item item">
       <img

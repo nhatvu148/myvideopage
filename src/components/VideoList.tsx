@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import VideoItem from "./VideoItem";
 
 const VideoList: React.FC = ({ videos, onVideoSelect }) => {

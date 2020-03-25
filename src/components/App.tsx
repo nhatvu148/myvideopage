@@ -1,12 +1,16 @@
-import * as React from "react";
+import React from "react";
 import SearchBar from "./SearchBar";
 import axios from "axios";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-const App: React.FC = () => {
-  const [videos, setVideos] = React.useState([]);
-  const [selectedVideo, setSelectedVideo] = React.useState(null);
+interface Props {
+  videos: string;
+}
+
+const App: React.FC<Props> = () => {
+  const [videos, setVideos] = React.useState<string[]>([]);
+  const [selectedVideo, setSelectedVideo] = React.useState<string>("");
 
   React.useEffect(() => {
     onTermSubmit("buildings");
@@ -31,7 +35,7 @@ const App: React.FC = () => {
     setSelectedVideo(response.data.items[0]);
   };
 
-  const onVideoSelect = video => {
+  const onVideoSelect = (video: string): void => {
     setSelectedVideo(video);
   };
 

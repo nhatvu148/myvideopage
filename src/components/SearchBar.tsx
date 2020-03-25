@@ -1,13 +1,17 @@
-import * as React from "react";
+import React from "react";
 
-const SearchBar: React.FC = props => {
-  const [term, setTerm] = React.useState("");
+interface Props {
+  videos: string;
+}
 
-  const onInputChange = event => {
+const SearchBar: React.FC<Props> = props => {
+  const [term, setTerm] = React.useState<string>("");
+
+  const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTerm(event.target.value);
   };
 
-  const onFormSubmit = event => {
+  const onFormSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
 
     props.onFormSubmit(term);
